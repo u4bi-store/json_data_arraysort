@@ -35,9 +35,14 @@
     echo '처리속도 FG 유형 1번문제 : '.$progressTime_Array[0][0].'초 <br><br>';
 
 
+    $return_data = [5];
+    Accuracy($return_data, $answer_Array[0][0]);
     // 정확도 유형별 평균
-    function Accuracy($value){
+    function Accuracy(&$obj, $num){
+        $obj[0] = $num;
     }
+
+    echo 'return_data[0]의 값 : '.$return_data[0].'<br>';
 
     // 정확도 모든 유형별의 합 평균
     function AccuracyAll($value){
